@@ -1,4 +1,26 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+Start editing to see some magic happen :)
+<style>
+  #draft {cursor:crosshair}
+
+  .sandwich {position:relative}
+  .sandwich>canvas {position:absolute;left:0;top:0}
+</style>
+
+<div class="sandwich">
+  <canvas
+    #main
+    id="main"
+    width="600"
+    height="600"
+    style="bbackground-color: red;"
+  ></canvas>
+
+  <canvas
+    #draft
+    id="draft"
+    width="600"
+    height="600"
+    style="bbackground-color: blue;"
+  ></canvas>
+</div>
