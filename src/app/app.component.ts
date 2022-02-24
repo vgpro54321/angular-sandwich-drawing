@@ -6,6 +6,7 @@ import {
   VERSION,
   ViewChild,
 } from '@angular/core';
+import { TransformHelper } from './transform-helper';
 
 @Component({
   selector: 'my-app',
@@ -35,5 +36,29 @@ export class AppComponent implements AfterViewInit {
 
     context2.fillStyle = 'rgba(255, 0, 0, 0.5)';
     context2.fillRect(110, 110, 50, 50);
+
+    const w = 200;
+    const h = 10;
+
+    // context1.fillStyle = 'rgba(255, 0, 0, 0.5)';
+    // context1.fillRect(0, 0, w, h);
+
+    // context1.save();
+    // TransformHelper.transform(context1, 90, w, h);
+    // context1.fillStyle = 'rgba(255, 0, 0, 0.5)';
+    // context1.fillRect(0, 0, w, h);
+    // context1.restore();
+
+    // context1.save();
+    // TransformHelper.transform(context1, 180, w, h);
+    // context1.fillStyle = 'rgba(255, 0, 0, 0.5)';
+    // context1.fillRect(0, 0, w, h);
+    // context1.restore();
+
+    context1.save();
+    TransformHelper.transform(context1, 270, w, h);
+    context1.fillStyle = 'rgba(255, 0, 0, 0.5)';
+    context1.fillRect(0, 0, w, h);
+    context1.restore();
   }
 }
